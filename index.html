@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Mounir Abou Idriss | تصميم مواقع | Conception Web</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; direction: rtl; text-align: right; }
+        .language-switch { text-align: center; padding: 10px; }
+        .section { padding: 20px; }
+        .fr { display: none; }
+    </style>
+</head>
+<body>
+    <div class="language-switch">
+        <button onclick="setLang('ar')">🇦🇪 العربية</button>
+        <button onclick="setLang('fr')">🇫🇷 Français</button>
+    </div>
+
+    <section class="section">
+        <h1 class="ar">مرحباً، أنا منير أبو إدريس</h1>
+        <h1 class="fr">Bonjour, je suis Mounir Abou Idriss</h1>
+        <p class="ar">أقدّم خدمة تصميم مواقع احترافية بلغتين.</p>
+        <p class="fr">Je propose la création de sites web professionnels bilingues.</p>
+    </section>
+
+    <section class="section contact">
+        <h2 class="ar">تواصل معي</h2>
+        <h2 class="fr">Contact</h2>
+
+        <form action="mailto:stitou.mhim@gmail.com" method="post" enctype="text/plain">
+            <label class="ar" for="name">الاسم:</label>
+            <label class="fr" for="name">Nom :</label><br>
+            <input type="text" id="name" name="name" required style="width: 100%; margin-bottom: 10px;"><br>
+
+            <label class="ar" for="email">البريد الإلكتروني:</label>
+            <label class="fr" for="email">Email :</label><br>
+            <input type="email" id="email" name="email" required style="width: 100%; margin-bottom: 10px;"><br>
+
+            <label class="ar" for="message">رسالتك:</label>
+            <label class="fr" for="message">Message :</label><br>
+            <textarea id="message" name="message" rows="5" required style="width: 100%; margin-bottom: 10px;"></textarea><br>
+
+            <button type="submit" style="background-color: #005599; color: white; padding: 10px 20px; border: none; border-radius: 5px;">إرسال / Envoyer</button>
+        </form>
+
+        <div style="margin-top: 20px; text-align: center;">
+            <a href="https://wa.me/212668166066?text=مرحباً%20منير،%20أرغب%20في%20الاستفسار%20عن%20خدمة%20تصميم%20المواقع.%20Merci%20de%20me%20donner%20plus%20d'informations%20sur%20la%20création%20de%20site%20web."
+               target="_blank"
+               style="text-decoration: none; background-color: #25D366; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; display: inline-block;">
+               📱 تواصل عبر واتساب / WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <script>
+        function setLang(lang) {
+            document.querySelectorAll('.ar').forEach(el => el.style.display = (lang === 'ar' ? 'block' : 'none'));
+            document.querySelectorAll('.fr').forEach(el => el.style.display = (lang === 'fr' ? 'block' : 'none'));
+        }
+        setLang('ar');
+    </script>
+</body>
+</html>
